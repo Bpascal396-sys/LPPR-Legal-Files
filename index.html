@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>rxylsharts</title>
+  <meta name="description" content="Legal pages for the rxylsharts Discord bot." />
+  <style>
+    :root {
+      --bg: #111111;
+      --bg-soft: #181818;
+      --card: rgba(255,255,255,0.08);
+      --card-border: rgba(255,255,255,0.12);
+      --text: #f5f5f2;
+      --heading: #fff8f6;
+      --muted: #b9b8b2;
+      --accent: #c63a3a;
+      --accent-soft: rgba(198,58,58,0.14);
+      --accent-border: rgba(198,58,58,0.25);
+      --shadow: 0 20px 60px rgba(0,0,0,0.45);
+      --radius: 24px;
+    }
+
+    * { box-sizing: border-box; }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at top left, rgba(198,58,58,0.18), transparent 35%),
+        radial-gradient(circle at bottom right, rgba(143,31,31,0.18), transparent 30%),
+        linear-gradient(180deg, #111111 0%, #0c0c0c 100%);
+      display: grid;
+      place-items: center;
+      padding: 32px;
+      line-height: 1.7;
+    }
+
+    .shell {
+      width: 100%;
+      max-width: 980px;
+    }
+
+    .card {
+      background: linear-gradient(180deg, rgba(255,255,255,0.07), rgba(255,255,255,0.04));
+      border: 1px solid var(--card-border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+      backdrop-filter: blur(14px);
+    }
+
+    .hero {
+      padding: 36px 28px 34px;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .topbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 16px;
+      flex-wrap: wrap;
+      margin-bottom: 26px;
+    }
+
+    .brand {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      max-width: 620px;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      width: fit-content;
+      padding: 8px 14px;
+      border-radius: 999px;
+      background: var(--accent-soft);
+      border: 1px solid var(--accent-border);
+      color: #ffd6d6;
+      font-size: 0.85rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      font-weight: 700;
+    }
+
+    .language-box {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      min-width: 220px;
+    }
+
+    .language-box label {
+      font-size: 0.92rem;
+      color: var(--muted);
+      font-weight: 700;
+    }
+
+    select {
+      appearance: none;
+      width: 100%;
+      padding: 12px 14px;
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 14px;
+      background: rgba(255,255,255,0.06);
+      color: var(--text);
+      font-size: 0.98rem;
+      font-weight: 600;
+      outline: none;
+    }
+
+    select:focus {
+      border-color: rgba(198,58,58,0.45);
+      box-shadow: 0 0 0 4px rgba(198,58,58,0.12);
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(2.4rem, 6vw, 4.8rem);
+      line-height: 0.95;
+      letter-spacing: -0.04em;
+      color: var(--heading);
+    }
+
+    .subtitle {
+      margin: 0;
+      max-width: 620px;
+      font-size: 1.05rem;
+      color: var(--muted);
+    }
+
+    .notice {
+      margin-top: 20px;
+      padding: 16px 18px;
+      border: 1px solid rgba(255,255,255,0.10);
+      background: rgba(255,255,255,0.05);
+      border-radius: 16px;
+      color: #d7d5cf;
+      font-size: 0.97rem;
+      max-width: 760px;
+    }
+
+    .links {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 20px;
+      padding: 28px;
+    }
+
+    .link-card {
+      display: block;
+      text-decoration: none;
+      color: inherit;
+      padding: 24px;
+      border-radius: 20px;
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.08);
+      transition: transform 180ms ease, border-color 180ms ease, background 180ms ease, box-shadow 180ms ease;
+    }
+
+    .link-card:hover {
+      transform: translateY(-4px);
+      background: rgba(255,255,255,0.08);
+      border-color: rgba(198,58,58,0.45);
+      box-shadow: 0 16px 40px rgba(0,0,0,0.3);
+    }
+
+    .link-title {
+      margin: 0 0 10px;
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: var(--heading);
+    }
+
+    .link-text {
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.6;
+    }
+
+    .arrow {
+      margin-top: 18px;
+      color: #ffb0b0;
+      font-weight: 600;
+    }
+
+    .footer {
+      padding: 0 28px 28px;
+      color: #8d8c87;
+      text-align: center;
+      font-size: 0.92rem;
+    }
+
+    html[dir="rtl"] body {
+      text-align: right;
+    }
+
+    html[dir="rtl"] .topbar {
+      flex-direction: row-reverse;
+    }
+
+    html[dir="rtl"] .brand {
+      align-items: flex-end;
+    }
+
+    html[dir="rtl"] .language-box {
+      align-items: stretch;
+    }
+
+    @media (max-width: 700px) {
+      body {
+        padding: 20px;
+      }
+
+      .hero {
+        padding: 26px 20px 24px;
+      }
+
+      .links {
+        grid-template-columns: 1fr;
+        padding: 20px;
+      }
+
+      .footer {
+        padding: 0 20px 20px;
+        text-align: left;
+      }
+
+      html[dir="rtl"] .footer {
+        text-align: right;
+      }
+
+      .language-box {
+        min-width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="shell">
+    <section class="card">
+      <div class="hero">
+        <div class="topbar">
+          <div class="brand">
+            <span class="eyebrow" id="pageTag">Legal Pages</span>
+            <h1 id="title">rxylsharts</h1>
+            <p class="subtitle" id="subtitle">
+              This page is the main entry for the bot’s legal information. Choose one of the pages below to view the privacy policy or the terms of use.
+            </p>
+          </div>
+
+          <div class="language-box">
+            <label for="languageSelect" id="languageLabel">Language</label>
+            <select id="languageSelect" aria-label="Choose language">
+              <option value="en">English</option>
+              <option value="de">Deutsch</option>
+              <option value="it">Italiano</option>
+              <option value="es">Español</option>
+              <option value="fr">Français</option>
+              <option value="ru">Русский</option>
+              <option value="ar">العربية</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="notice" id="translationNotice">
+          Choose a language here and the same language will automatically open on the legal pages.
+        </div>
+      </div>
+
+      <div class="links">
+        <a class="link-card" id="privacyLink" href="./privacy-policy.html?lang=en">
+          <h2 class="link-title" id="privacyTitle">Privacy Policy</h2>
+          <p class="link-text" id="privacyText">
+            Read what data is processed, how messages are handled, and which third-party services are involved.
+          </p>
+          <div class="arrow" id="privacyArrow">Open page →</div>
+        </a>
+
+        <a class="link-card" id="termsLink" href="./terms-of-use.html?lang=en">
+          <h2 class="link-title" id="termsTitle">Terms of Use</h2>
+          <p class="link-text" id="termsText">
+            Review the usage rules, limitations, and general conditions for interacting with the bot.
+          </p>
+          <div class="arrow" id="termsArrow">Open page →</div>
+        </a>
+      </div>
+
+      <div class="footer" id="footerText">
+        Public legal pages for the Discord bot.
+      </div>
+    </section>
+  </main>
+
+  <script>
+    const translations = {
+      en: {
+        dir: 'ltr',
+        pageTag: 'Legal Pages',
+        languageLabel: 'Language',
+        title: 'rxylsharts',
+        subtitle: 'This page is the main entry for the bot’s legal information. Choose one of the pages below to view the privacy policy or the terms of use.',
+        translationNotice: 'Choose a language here and the same language will automatically open on the legal pages.',
+        privacyTitle: 'Privacy Policy',
+        privacyText: 'Read what data is processed, how messages are handled, and which third-party services are involved.',
+        privacyArrow: 'Open page →',
+        termsTitle: 'Terms of Use',
+        termsText: 'Review the usage rules, limitations, and general conditions for interacting with the bot.',
+        termsArrow: 'Open page →',
+        footerText: 'Public legal pages for the Discord bot.'
+      },
+      de: {
+        dir: 'ltr',
+        pageTag: 'Rechtsseiten',
+        languageLabel: 'Sprache',
+        title: 'rxylsharts',
+        subtitle: 'Diese Seite ist der zentrale Einstiegspunkt für die rechtlichen Informationen des Bots. Wähle unten eine der Seiten aus, um die Datenschutzerklärung oder die Nutzungsbedingungen anzusehen.',
+        translationNotice: 'Wähle hier eine Sprache aus, und dieselbe Sprache wird automatisch auch auf den rechtlichen Seiten geöffnet.',
+        privacyTitle: 'Datenschutzerklärung',
+        privacyText: 'Lies nach, welche Daten verarbeitet werden, wie Nachrichten behandelt werden und welche Drittanbieter-Dienste beteiligt sind.',
+        privacyArrow: 'Seite öffnen →',
+        termsTitle: 'Nutzungsbedingungen',
+        termsText: 'Sieh dir die Nutzungsregeln, Einschränkungen und allgemeinen Bedingungen für die Interaktion mit dem Bot an.',
+        termsArrow: 'Seite öffnen →',
+        footerText: 'Öffentliche Rechtsseiten für den Discord-Bot.'
+      },
+      it: {
+        dir: 'ltr',
+        pageTag: 'Pagine legali',
+        languageLabel: 'Lingua',
+        title: 'rxylsharts',
+        subtitle: 'Questa pagina è il punto di accesso principale alle informazioni legali del bot. Scegli una delle pagine qui sotto per visualizzare l’informativa sulla privacy o i termini di utilizzo.',
+        translationNotice: 'Scegli qui una lingua e la stessa lingua verrà aperta automaticamente anche nelle pagine legali.',
+        privacyTitle: 'Informativa sulla Privacy',
+        privacyText: 'Leggi quali dati vengono trattati, come vengono gestiti i messaggi e quali servizi di terze parti sono coinvolti.',
+        privacyArrow: 'Apri pagina →',
+        termsTitle: 'Termini di Utilizzo',
+        termsText: 'Consulta le regole d’uso, le limitazioni e le condizioni generali per interagire con il bot.',
+        termsArrow: 'Apri pagina →',
+        footerText: 'Pagine legali pubbliche per il bot Discord.'
+      },
+      es: {
+        dir: 'ltr',
+        pageTag: 'Páginas legales',
+        languageLabel: 'Idioma',
+        title: 'rxylsharts',
+        subtitle: 'Esta página es la entrada principal para la información legal del bot. Elige una de las páginas de abajo para ver la política de privacidad o los términos de uso.',
+        translationNotice: 'Elige aquí un idioma y ese mismo idioma se abrirá automáticamente también en las páginas legales.',
+        privacyTitle: 'Política de Privacidad',
+        privacyText: 'Lee qué datos se procesan, cómo se gestionan los mensajes y qué servicios de terceros están implicados.',
+        privacyArrow: 'Abrir página →',
+        termsTitle: 'Términos de Uso',
+        termsText: 'Revisa las reglas de uso, limitaciones y condiciones generales para interactuar con el bot.',
+        termsArrow: 'Abrir página →',
+        footerText: 'Páginas legales públicas para el bot de Discord.'
+      },
+      fr: {
+        dir: 'ltr',
+        pageTag: 'Pages juridiques',
+        languageLabel: 'Langue',
+        title: 'rxylsharts',
+        subtitle: 'Cette page est le point d’entrée principal pour les informations juridiques du bot. Choisissez l’une des pages ci-dessous pour consulter la politique de confidentialité ou les conditions d’utilisation.',
+        translationNotice: 'Choisissez une langue ici, et cette même langue s’ouvrira automatiquement sur les pages juridiques.',
+        privacyTitle: 'Politique de confidentialité',
+        privacyText: 'Consultez quelles données sont traitées, comment les messages sont gérés et quels services tiers sont impliqués.',
+        privacyArrow: 'Ouvrir la page →',
+        termsTitle: 'Conditions d’utilisation',
+        termsText: 'Consultez les règles d’utilisation, les limitations et les conditions générales applicables à l’interaction avec le bot.',
+        termsArrow: 'Ouvrir la page →',
+        footerText: 'Pages juridiques publiques pour le bot Discord.'
+      },
+      ru: {
+        dir: 'ltr',
+        pageTag: 'Юридические страницы',
+        languageLabel: 'Язык',
+        title: 'rxylsharts',
+        subtitle: 'Эта страница является основной точкой входа к юридической информации о боте. Выберите одну из страниц ниже, чтобы открыть политику конфиденциальности или условия использования.',
+        translationNotice: 'Выберите здесь язык, и тот же язык автоматически откроется и на юридических страницах.',
+        privacyTitle: 'Политика конфиденциальности',
+        privacyText: 'Узнайте, какие данные обрабатываются, как обрабатываются сообщения и какие сторонние сервисы используются.',
+        privacyArrow: 'Открыть страницу →',
+        termsTitle: 'Условия использования',
+        termsText: 'Ознакомьтесь с правилами использования, ограничениями и общими условиями взаимодействия с ботом.',
+        termsArrow: 'Открыть страницу →',
+        footerText: 'Публичные юридические страницы для Discord-бота.'
+      },
+      ar: {
+        dir: 'rtl',
+        pageTag: 'الصفحات القانونية',
+        languageLabel: 'اللغة',
+        title: 'rxylsharts',
+        subtitle: 'هذه الصفحة هي المدخل الرئيسي للمعلومات القانونية الخاصة بالبوت. اختر إحدى الصفحات أدناه لعرض سياسة الخصوصية أو شروط الاستخدام.',
+        translationNotice: 'اختر اللغة هنا، وسيتم فتح الصفحات القانونية تلقائيًا بنفس اللغة.',
+        privacyTitle: 'سياسة الخصوصية',
+        privacyText: 'اطّلع على البيانات التي تتم معالجتها، وكيفية التعامل مع الرسائل، والخدمات الخارجية المستخدمة.',
+        privacyArrow: 'فتح الصفحة ←',
+        termsTitle: 'شروط الاستخدام',
+        termsText: 'راجع قواعد الاستخدام والقيود والشروط العامة الخاصة بالتفاعل مع البوت.',
+        termsArrow: 'فتح الصفحة ←',
+        footerText: 'صفحات قانونية عامة لبوت Discord.'
+      }
+    };
+
+    const textIds = [
+      'pageTag','languageLabel','title','subtitle','translationNotice',
+      'privacyTitle','privacyText','privacyArrow','termsTitle','termsText','termsArrow','footerText'
+    ];
+
+    function updateLinks(lang) {
+      document.getElementById('privacyLink').href = `./privacy-policy.html?lang=${encodeURIComponent(lang)}`;
+      document.getElementById('termsLink').href = `./terms-of-use.html?lang=${encodeURIComponent(lang)}`;
+    }
+
+    function applyLanguage(lang) {
+      const t = translations[lang] || translations.en;
+      document.documentElement.lang = lang;
+      document.documentElement.dir = t.dir || 'ltr';
+
+      textIds.forEach((id) => {
+        const el = document.getElementById(id);
+        if (el && t[id]) el.textContent = t[id];
+      });
+
+      document.getElementById('languageSelect').value = lang;
+      updateLinks(lang);
+    }
+
+    const params = new URLSearchParams(window.location.search);
+    const initialLang = params.get('lang');
+    const startLang = translations[initialLang] ? initialLang : 'en';
+
+    document.getElementById('languageSelect').addEventListener('change', (event) => {
+      const lang = event.target.value;
+      const url = new URL(window.location.href);
+      url.searchParams.set('lang', lang);
+      window.history.replaceState({}, '', url);
+      applyLanguage(lang);
+    });
+
+    applyLanguage(startLang);
+  </script>
+</body>
+</html>
