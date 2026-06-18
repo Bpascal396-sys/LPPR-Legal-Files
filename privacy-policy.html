@@ -1,0 +1,803 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy | 𐌋𐌀𐌐𐌐𐌋𐌀𐌍𐌃</title>
+  <meta name="description" content="Privacy Policy for 𐌋𐌀𐌐𐌐𐌋𐌀𐌍𐌃 Discord bot." />
+  <style>
+    :root {
+      --bg: #111111;
+      --card: rgba(255,255,255,0.08);
+      --card-border: rgba(255,255,255,0.12);
+      --text: #f5f5f2;
+      --heading: #fff8f6;
+      --muted: #b9b8b2;
+      --accent: #c63a3a;
+      --accent-soft: rgba(198,58,58,0.14);
+      --accent-border: rgba(198,58,58,0.25);
+      --notice-bg: rgba(255,255,255,0.05);
+      --notice-border: rgba(255,255,255,0.10);
+      --shadow: 0 20px 60px rgba(0,0,0,0.45);
+      --radius: 24px;
+    }
+
+    * { box-sizing: border-box; }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background:
+        radial-gradient(circle at top left, rgba(198,58,58,0.18), transparent 35%),
+        radial-gradient(circle at bottom right, rgba(143,31,31,0.18), transparent 30%),
+        linear-gradient(180deg, #111111 0%, #0c0c0c 100%);
+      color: var(--text);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.75;
+      font-size: 1rem;
+    }
+
+    .wrap {
+      max-width: 1040px;
+      margin: 48px auto;
+      padding: 0 20px;
+    }
+
+    .card {
+      background: linear-gradient(180deg, rgba(255,255,255,0.07), rgba(255,255,255,0.04));
+      border: 1px solid var(--card-border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 36px 32px;
+      backdrop-filter: blur(14px);
+    }
+
+    .back-link {
+      display: inline-block;
+      margin-bottom: 18px;
+      padding: 8px 14px;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.1);
+      color: #ffd6d6;
+      text-decoration: none;
+      font-weight: 600;
+      transition: background 180ms ease, transform 180ms ease, border-color 180ms ease;
+    }
+
+    .back-link:hover {
+      background: rgba(255,255,255,0.08);
+      border-color: rgba(198,58,58,0.45);
+      transform: translateY(-2px);
+    }
+
+    .topbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 16px;
+      flex-wrap: wrap;
+      margin-bottom: 18px;
+    }
+
+    .brand {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      width: fit-content;
+      padding: 8px 14px;
+      border-radius: 999px;
+      background: var(--accent-soft);
+      border: 1px solid var(--accent-border);
+      color: #ffd6d6;
+      font-size: 0.85rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .language-box {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      min-width: 220px;
+    }
+
+    .language-box label {
+      font-size: 0.92rem;
+      color: var(--muted);
+      font-weight: 700;
+    }
+
+    select {
+      appearance: none;
+      width: 100%;
+      padding: 12px 14px;
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 14px;
+      background: rgba(255,255,255,0.06);
+      color: var(--text);
+      font-size: 0.98rem;
+      font-weight: 600;
+      outline: none;
+    }
+
+    select:focus {
+      border-color: rgba(198,58,58,0.45);
+      box-shadow: 0 0 0 4px rgba(198,58,58,0.12);
+    }
+
+    h1, h2 {
+      color: var(--heading);
+      line-height: 1.2;
+    }
+
+    h1 {
+      margin: 0 0 8px;
+      font-size: clamp(2rem, 5vw, 3.6rem);
+      letter-spacing: -0.04em;
+    }
+
+    .subtitle {
+      margin: 0 0 24px;
+      color: var(--muted);
+      font-size: 1rem;
+    }
+
+    .notice {
+      margin: 0 0 28px;
+      padding: 16px 18px;
+      border: 1px solid var(--notice-border);
+      background: var(--notice-bg);
+      border-radius: 16px;
+      color: #d7d5cf;
+      font-size: 0.97rem;
+    }
+
+    h2 {
+      margin-top: 34px;
+      margin-bottom: 12px;
+      font-size: 1.22rem;
+      padding-bottom: 10px;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+
+    p, li {
+      max-width: 76ch;
+      color: var(--text);
+    }
+
+    ul {
+      padding-left: 22px;
+    }
+
+    li::marker {
+      color: #ffb0b0;
+    }
+
+    a {
+      color: #ffb0b0;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .footer {
+      margin-top: 40px;
+      padding-top: 20px;
+      border-top: 1px solid rgba(255,255,255,0.08);
+      color: #8d8c87;
+      font-size: 0.96rem;
+    }
+
+    html[dir="rtl"] body {
+      text-align: right;
+    }
+
+    html[dir="rtl"] .topbar {
+      flex-direction: row-reverse;
+    }
+
+    html[dir="rtl"] .brand {
+      align-items: flex-end;
+    }
+
+    html[dir="rtl"] .language-box {
+      align-items: stretch;
+    }
+
+    html[dir="rtl"] ul {
+      padding-left: 0;
+      padding-right: 22px;
+    }
+
+    @media (max-width: 640px) {
+      .wrap {
+        margin: 24px auto;
+      }
+
+      .card {
+        padding: 24px 20px;
+        border-radius: 18px;
+      }
+
+      h1 {
+        font-size: 1.9rem;
+      }
+
+      .language-box {
+        min-width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <main class="card">
+      <a class="back-link" id="backLink" href="./index.html?lang=en">← Back to main page</a>
+
+      <div class="topbar">
+        <div class="brand">
+          <span class="eyebrow" id="pageTag">Legal Document</span>
+        </div>
+
+        <div class="language-box">
+          <label for="languageSelect" id="languageLabel">Language</label>
+          <select id="languageSelect" aria-label="Choose language">
+            <option value="en">English</option>
+            <option value="de">Deutsch</option>
+            <option value="it">Italiano</option>
+            <option value="es">Español</option>
+            <option value="fr">Français</option>
+            <option value="ru">Русский</option>
+            <option value="ar">العربية</option>
+          </select>
+        </div>
+      </div>
+
+      <h1 id="title">Privacy Policy</h1>
+      <p class="subtitle" id="lastUpdated">Last updated: June 17, 2026</p>
+
+      <div class="notice" id="translationNotice"></div>
+
+      <p id="intro"></p>
+
+      <h2 id="h1"></h2>
+      <p id="c1a"></p>
+      <p id="c1b"></p>
+
+      <h2 id="h2"></h2>
+      <p id="c2a"></p>
+      <ul id="list2"></ul>
+
+      <h2 id="h3"></h2>
+      <p id="c3a"></p>
+      <ul id="list3"></ul>
+
+      <h2 id="h4"></h2>
+      <p id="c4a"></p>
+
+      <h2 id="h5"></h2>
+      <p id="c5a"></p>
+
+      <h2 id="h6"></h2>
+      <p id="c6a"></p>
+      <p id="c6b"></p>
+      <p id="c6c"></p>
+
+      <h2 id="h7"></h2>
+      <p id="c7a"></p>
+      <ul id="list7"></ul>
+
+      <h2 id="h8"></h2>
+      <p id="c8a"></p>
+      <p id="c8b"></p>
+
+      <h2 id="h9"></h2>
+      <p id="c9a"></p>
+      <p id="c9b"></p>
+
+      <h2 id="h10"></h2>
+      <p id="c10a"></p>
+
+      <h2 id="h11"></h2>
+      <p id="c11a"></p>
+
+      <h2 id="h12"></h2>
+      <p id="c12a"></p>
+
+      <h2 id="h13"></h2>
+      <p id="c13a"></p>
+
+      <div class="footer">
+        <p id="footerText"></p>
+      </div>
+    </main>
+  </div>
+
+  <script>
+    const translations = {
+      en: {
+        dir: 'ltr',
+        backLink: '← Back to main page',
+        pageTag: 'Legal Document',
+        languageLabel: 'Language',
+        title: 'Privacy Policy',
+        lastUpdated: 'Last updated: June 17, 2026',
+        translationNotice: 'This page includes translated versions for convenience. Translations may not be perfectly accurate. In the event of any inconsistency or ambiguity, the English version should be treated as the controlling version.',
+        intro: 'This Privacy Policy explains how 𐌋𐌀𐌐𐌐𐌋𐌀𐌍𐌃 (“the Bot”, “we”, “us”) processes personal data when users interact with the Bot on Discord.',
+        h1: '1. Controller and Scope',
+        c1a: 'This Privacy Policy applies to the use of the Bot within Discord servers, channels, and direct interactions where the Bot is available.',
+        c1b: 'The Bot is intended to provide AI-based chat interaction and related Discord functionality.',
+        h2: '2. Data We May Process',
+        c2a: 'Depending on how you use the Bot, the following categories of data may be processed:',
+        list2: [
+          'Discord user identifiers such as usernames, display names, user IDs, role information, and channel context.',
+          'Messages sent to the Bot or messages that trigger the Bot within the allowed channel and role setup.',
+          'Technical metadata needed to operate the service, such as timestamps, basic server context, and request-related logs.',
+          'Short-term conversation context used to generate replies.'
+        ],
+        h3: '3. Conversation Storage',
+        c3a: 'The Bot may temporarily store a limited amount of message history to maintain context and improve conversation quality.',
+        list3: [
+          'The Bot stores up to 200 messages in memory for conversation context.',
+          'This message history is used to generate more coherent replies.',
+          'Messages may also remain stored by Discord itself unless they are deleted manually or removed by another bot or moderator.'
+        ],
+        h4: '4. Purpose of Processing',
+        c4a: 'Data is processed only to provide the Bot’s functionality, generate replies, maintain short-term memory, improve reliability, and keep the service secure and operable.',
+        h5: '5. Legal Basis',
+        c5a: 'Where applicable, processing is carried out on the basis of legitimate interest in operating and securing the Bot, and in some cases on the basis of user-requested interaction with the service.',
+        h6: '6. Third-Party Services',
+        c6a: 'To operate the Bot, third-party services may be involved.',
+        c6b: 'These may include Discord for platform hosting and message delivery, Anthropic for AI response generation, Railway for deployment and hosting, and GitHub for code or static page hosting.',
+        c6c: 'Each third-party provider may process certain data under its own privacy policy and terms.',
+        h7: '7. Data Retention',
+        c7a: 'We try to keep stored data limited and proportionate to the purpose of the service.',
+        list7: [
+          'Short-term conversation memory is limited to 200 stored messages.',
+          'Operational logs may be retained only as long as necessary for maintenance, debugging, or abuse prevention.',
+          'Discord may retain data separately under its own policies.'
+        ],
+        h8: '8. User Rights',
+        c8a: 'Depending on your location and applicable law, you may have rights relating to access, correction, deletion, restriction, or objection regarding personal data.',
+        c8b: 'Because much of the interaction takes place through Discord, some data handling may also need to be addressed through Discord’s own systems and controls.',
+        h9: '9. Data Security',
+        c9a: 'Reasonable technical and organizational measures are used to reduce the risk of unauthorized access, misuse, or loss of data.',
+        c9b: 'However, no online service can guarantee absolute security.',
+        h10: '10. Age and Acceptable Use',
+        c10a: 'Users should only use the Bot in accordance with Discord’s Terms of Service, local law, and any applicable age requirements.',
+        h11: '11. International Processing',
+        c11a: 'Because third-party providers may operate internationally, data may be processed in countries outside your own jurisdiction.',
+        h12: '12. Changes to This Policy',
+        c12a: 'This Privacy Policy may be updated from time to time. The most recent version will always be the one published on this page.',
+        h13: '13. Contact',
+        c13a: 'If you have questions about this Privacy Policy, you should contact the Bot operator through the available Discord or project contact channels.',
+        footerText: 'This document is provided for informational purposes and may be updated as the Bot evolves.'
+      },
+
+      de: {
+        dir: 'ltr',
+        backLink: '← Zurück zur Hauptseite',
+        pageTag: 'Rechtsdokument',
+        languageLabel: 'Sprache',
+        title: 'Datenschutzerklärung',
+        lastUpdated: 'Zuletzt aktualisiert: 17. Juni 2026',
+        translationNotice: 'Diese Seite enthält Übersetzungen zur besseren Verständlichkeit. Übersetzungen sind möglicherweise nicht vollständig exakt. Bei Unterschieden oder Unklarheiten gilt die englische Version als maßgeblich.',
+        intro: 'Diese Datenschutzerklärung erklärt, wie 𐌋𐌀𐌐𐌐𐌋𐌀𐌍𐌃 („der Bot“, „wir“, „uns“) personenbezogene Daten verarbeitet, wenn Nutzer mit dem Bot auf Discord interagieren.',
+        h1: '1. Verantwortlicher und Geltungsbereich',
+        c1a: 'Diese Datenschutzerklärung gilt für die Nutzung des Bots innerhalb von Discord-Servern, Kanälen und direkten Interaktionen, in denen der Bot verfügbar ist.',
+        c1b: 'Der Bot dient dazu, KI-basierte Chatfunktionen und damit verbundene Discord-Funktionen bereitzustellen.',
+        h2: '2. Welche Daten verarbeitet werden können',
+        c2a: 'Je nachdem, wie du den Bot nutzt, können folgende Datenkategorien verarbeitet werden:',
+        list2: [
+          'Discord-Benutzerinformationen wie Benutzername, Anzeigename, Benutzer-ID, Rolleninformationen und Kanal-Kontext.',
+          'Nachrichten, die an den Bot gesendet werden oder die den Bot im erlaubten Kanal- und Rollen-Setup auslösen.',
+          'Technische Metadaten wie Zeitstempel, grundlegender Server-Kontext und anfragebezogene Protokolle.',
+          'Kurzfristiger Gesprächskontext zur Generierung von Antworten.'
+        ],
+        h3: '3. Speicherung von Gesprächen',
+        c3a: 'Der Bot kann vorübergehend eine begrenzte Anzahl von Nachrichten speichern, um Kontext zu behalten und die Gesprächsqualität zu verbessern.',
+        list3: [
+          'Der Bot speichert bis zu 200 Nachrichten im Arbeitsspeicher für den Gesprächskontext.',
+          'Dieser Nachrichtenverlauf wird verwendet, um zusammenhängendere Antworten zu erzeugen.',
+          'Nachrichten können zusätzlich weiterhin von Discord selbst gespeichert werden, bis sie manuell gelöscht oder von einem anderen Bot oder Moderator entfernt werden.'
+        ],
+        h4: '4. Zweck der Verarbeitung',
+        c4a: 'Daten werden ausschließlich verarbeitet, um die Funktion des Bots bereitzustellen, Antworten zu erzeugen, ein Kurzzeitgedächtnis zu erhalten, die Zuverlässigkeit zu verbessern und den Dienst sicher und funktionsfähig zu halten.',
+        h5: '5. Rechtsgrundlage',
+        c5a: 'Soweit anwendbar, erfolgt die Verarbeitung auf Grundlage berechtigter Interessen am Betrieb und an der Absicherung des Bots sowie teilweise auf Grundlage der vom Nutzer gewünschten Interaktion mit dem Dienst.',
+        h6: '6. Drittanbieter-Dienste',
+        c6a: 'Für den Betrieb des Bots können Drittanbieter-Dienste eingebunden sein.',
+        c6b: 'Dazu können Discord für Plattform und Nachrichtenübermittlung, Anthropic für KI-generierte Antworten, Railway für Deployment und Hosting sowie GitHub für Code- oder statisches Seitenhosting gehören.',
+        c6c: 'Jeder Drittanbieter kann bestimmte Daten nach seinen eigenen Datenschutzrichtlinien und Bedingungen verarbeiten.',
+        h7: '7. Speicherdauer',
+        c7a: 'Wir versuchen, gespeicherte Daten auf das erforderliche und verhältnismäßige Maß zu beschränken.',
+        list7: [
+          'Das Kurzzeitgedächtnis des Bots ist auf 200 gespeicherte Nachrichten begrenzt.',
+          'Betriebsprotokolle werden nur so lange gespeichert, wie es für Wartung, Fehlersuche oder Missbrauchsprävention erforderlich ist.',
+          'Discord kann Daten nach eigenen Richtlinien separat speichern.'
+        ],
+        h8: '8. Rechte der Nutzer',
+        c8a: 'Je nach Standort und anwendbarem Recht hast du möglicherweise Rechte auf Auskunft, Berichtigung, Löschung, Einschränkung oder Widerspruch in Bezug auf personenbezogene Daten.',
+        c8b: 'Da ein großer Teil der Interaktion über Discord erfolgt, müssen manche Datenvorgänge möglicherweise auch über Discord selbst behandelt werden.',
+        h9: '9. Datensicherheit',
+        c9a: 'Es werden angemessene technische und organisatorische Maßnahmen verwendet, um das Risiko unbefugten Zugriffs, Missbrauchs oder Datenverlusts zu verringern.',
+        c9b: 'Trotzdem kann kein Online-Dienst absolute Sicherheit garantieren.',
+        h10: '10. Alter und zulässige Nutzung',
+        c10a: 'Nutzer sollten den Bot nur im Einklang mit den Discord-Nutzungsbedingungen, lokalem Recht und etwaigen Altersanforderungen verwenden.',
+        h11: '11. Internationale Verarbeitung',
+        c11a: 'Da Drittanbieter international tätig sein können, können Daten auch in Ländern außerhalb deiner eigenen Rechtsordnung verarbeitet werden.',
+        h12: '12. Änderungen dieser Erklärung',
+        c12a: 'Diese Datenschutzerklärung kann von Zeit zu Zeit aktualisiert werden. Maßgeblich ist immer die aktuell auf dieser Seite veröffentlichte Version.',
+        h13: '13. Kontakt',
+        c13a: 'Wenn du Fragen zu dieser Datenschutzerklärung hast, solltest du den Betreiber des Bots über die verfügbaren Discord- oder Projektkontaktwege kontaktieren.',
+        footerText: 'Dieses Dokument dient Informationszwecken und kann aktualisiert werden, wenn sich der Bot weiterentwickelt.'
+      },
+
+      it: {
+        dir: 'ltr',
+        backLink: '← Torna alla pagina principale',
+        pageTag: 'Documento legale',
+        languageLabel: 'Lingua',
+        title: 'Informativa sulla Privacy',
+        lastUpdated: 'Ultimo aggiornamento: 17 giugno 2026',
+        translationNotice: 'Questa pagina include traduzioni per comodità. Le traduzioni potrebbero non essere perfettamente accurate. In caso di incongruenze o ambiguità, la versione inglese deve essere considerata prevalente.',
+        intro: 'Questa Informativa sulla Privacy spiega come 𐌋𐌀𐌐𐌐𐌋𐌀𐌍𐌃 (“il Bot”, “noi”) tratta i dati personali quando gli utenti interagiscono con il Bot su Discord.',
+        h1: '1. Titolare e ambito di applicazione',
+        c1a: 'Questa Informativa sulla Privacy si applica all’uso del Bot all’interno di server Discord, canali e interazioni dirette in cui il Bot è disponibile.',
+        c1b: 'Il Bot è destinato a fornire interazioni chat basate su IA e funzionalità Discord correlate.',
+        h2: '2. Dati che possiamo trattare',
+        c2a: 'A seconda di come utilizzi il Bot, possono essere trattate le seguenti categorie di dati:',
+        list2: [
+          'Identificatori Discord come username, display name, ID utente, informazioni sui ruoli e contesto del canale.',
+          'Messaggi inviati al Bot o messaggi che attivano il Bot nel canale e ruolo consentiti.',
+          'Metadati tecnici come timestamp, contesto base del server e log relativi alle richieste.',
+          'Contesto conversazionale a breve termine usato per generare risposte.'
+        ],
+        h3: '3. Conservazione delle conversazioni',
+        c3a: 'Il Bot può memorizzare temporaneamente una quantità limitata di cronologia dei messaggi per mantenere il contesto e migliorare la qualità della conversazione.',
+        list3: [
+          'Il Bot memorizza fino a 200 messaggi in memoria per il contesto conversazionale.',
+          'Questa cronologia viene usata per generare risposte più coerenti.',
+          'I messaggi possono anche restare memorizzati da Discord stessa finché non vengono eliminati manualmente o rimossi da un altro bot o moderatore.'
+        ],
+        h4: '4. Finalità del trattamento',
+        c4a: 'I dati sono trattati esclusivamente per fornire la funzionalità del Bot, generare risposte, mantenere memoria a breve termine, migliorare l’affidabilità e mantenere il servizio sicuro e operativo.',
+        h5: '5. Base giuridica',
+        c5a: 'Ove applicabile, il trattamento viene effettuato sulla base del legittimo interesse a gestire e proteggere il Bot e, in alcuni casi, sulla base dell’interazione richiesta dall’utente con il servizio.',
+        h6: '6. Servizi di terze parti',
+        c6a: 'Per far funzionare il Bot possono essere coinvolti servizi di terze parti.',
+        c6b: 'Questi possono includere Discord per la piattaforma e la consegna dei messaggi, Anthropic per la generazione delle risposte IA, Railway per il deployment e l’hosting, e GitHub per l’hosting del codice o delle pagine statiche.',
+        c6c: 'Ogni fornitore terzo può trattare alcuni dati in base alla propria privacy policy e ai propri termini.',
+        h7: '7. Conservazione dei dati',
+        c7a: 'Cerchiamo di mantenere i dati memorizzati limitati e proporzionati allo scopo del servizio.',
+        list7: [
+          'La memoria a breve termine è limitata a 200 messaggi memorizzati.',
+          'I log operativi possono essere conservati solo per il tempo necessario a manutenzione, debug o prevenzione degli abusi.',
+          'Discord può conservare i dati separatamente secondo le proprie politiche.'
+        ],
+        h8: '8. Diritti degli utenti',
+        c8a: 'A seconda del luogo in cui ti trovi e della legge applicabile, potresti avere diritti di accesso, rettifica, cancellazione, limitazione o opposizione in relazione ai dati personali.',
+        c8b: 'Poiché gran parte dell’interazione avviene tramite Discord, alcune richieste relative ai dati potrebbero dover essere gestite anche tramite i sistemi di Discord.',
+        h9: '9. Sicurezza dei dati',
+        c9a: 'Vengono adottate misure tecniche e organizzative ragionevoli per ridurre il rischio di accesso non autorizzato, uso improprio o perdita dei dati.',
+        c9b: 'Tuttavia, nessun servizio online può garantire sicurezza assoluta.',
+        h10: '10. Età e uso consentito',
+        c10a: 'Gli utenti devono utilizzare il Bot solo in conformità con i Termini di Servizio di Discord, la legge locale e qualsiasi requisito di età applicabile.',
+        h11: '11. Trattamento internazionale',
+        c11a: 'Poiché i fornitori terzi possono operare a livello internazionale, i dati possono essere trattati in paesi al di fuori della tua giurisdizione.',
+        h12: '12. Modifiche a questa informativa',
+        c12a: 'Questa Informativa sulla Privacy può essere aggiornata di tanto in tanto. La versione più recente sarà sempre quella pubblicata su questa pagina.',
+        h13: '13. Contatto',
+        c13a: 'Se hai domande su questa Informativa sulla Privacy, dovresti contattare l’operatore del Bot tramite i canali di contatto Discord o del progetto disponibili.',
+        footerText: 'Questo documento è fornito a scopo informativo e può essere aggiornato man mano che il Bot si evolve.'
+      },
+
+      es: {
+        dir: 'ltr',
+        backLink: '← Volver a la página principal',
+        pageTag: 'Documento legal',
+        languageLabel: 'Idioma',
+        title: 'Política de Privacidad',
+        lastUpdated: 'Última actualización: 17 de junio de 2026',
+        translationNotice: 'Esta página incluye traducciones por comodidad. Las traducciones pueden no ser totalmente exactas. En caso de inconsistencia o ambigüedad, la versión en inglés debe considerarse la versión dominante.',
+        intro: 'Esta Política de Privacidad explica cómo 𐌋𐌀𐌐𐌐𐌋𐌀𐌍𐌃 (“el Bot”, “nosotros”) procesa datos personales cuando los usuarios interactúan con el Bot en Discord.',
+        h1: '1. Responsable y alcance',
+        c1a: 'Esta Política de Privacidad se aplica al uso del Bot dentro de servidores de Discord, canales e interacciones directas en las que el Bot esté disponible.',
+        c1b: 'El Bot está diseñado para ofrecer interacción de chat basada en IA y funciones relacionadas dentro de Discord.',
+        h2: '2. Datos que podemos procesar',
+        c2a: 'Dependiendo de cómo uses el Bot, pueden procesarse las siguientes categorías de datos:',
+        list2: [
+          'Identificadores de Discord como nombre de usuario, nombre visible, ID de usuario, información de roles y contexto del canal.',
+          'Mensajes enviados al Bot o mensajes que activen el Bot dentro de la configuración permitida de canal y rol.',
+          'Metadatos técnicos como marcas de tiempo, contexto básico del servidor y registros relacionados con solicitudes.',
+          'Contexto conversacional a corto plazo usado para generar respuestas.'
+        ],
+        h3: '3. Almacenamiento de conversaciones',
+        c3a: 'El Bot puede almacenar temporalmente una cantidad limitada de historial de mensajes para mantener el contexto y mejorar la calidad de la conversación.',
+        list3: [
+          'El Bot almacena hasta 200 mensajes en memoria para el contexto conversacional.',
+          'Este historial se utiliza para generar respuestas más coherentes.',
+          'Los mensajes también pueden seguir almacenados por Discord hasta que se eliminen manualmente o sean eliminados por otro bot o moderador.'
+        ],
+        h4: '4. Finalidad del tratamiento',
+        c4a: 'Los datos se procesan únicamente para proporcionar la funcionalidad del Bot, generar respuestas, mantener memoria a corto plazo, mejorar la fiabilidad y mantener el servicio seguro y operativo.',
+        h5: '5. Base jurídica',
+        c5a: 'Cuando corresponda, el tratamiento se realiza sobre la base del interés legítimo en operar y proteger el Bot, y en algunos casos sobre la base de la interacción solicitada por el usuario con el servicio.',
+        h6: '6. Servicios de terceros',
+        c6a: 'Para operar el Bot, pueden intervenir servicios de terceros.',
+        c6b: 'Estos pueden incluir Discord para la plataforma y la entrega de mensajes, Anthropic para la generación de respuestas de IA, Railway para despliegue y alojamiento, y GitHub para alojar código o páginas estáticas.',
+        c6c: 'Cada proveedor externo puede procesar ciertos datos bajo su propia política de privacidad y sus propios términos.',
+        h7: '7. Conservación de datos',
+        c7a: 'Intentamos mantener los datos almacenados limitados y proporcionales al propósito del servicio.',
+        list7: [
+          'La memoria a corto plazo está limitada a 200 mensajes almacenados.',
+          'Los registros operativos pueden conservarse solo durante el tiempo necesario para mantenimiento, depuración o prevención de abusos.',
+          'Discord puede conservar datos por separado según sus propias políticas.'
+        ],
+        h8: '8. Derechos del usuario',
+        c8a: 'Dependiendo de tu ubicación y de la legislación aplicable, puedes tener derechos de acceso, rectificación, eliminación, restricción u oposición con respecto a los datos personales.',
+        c8b: 'Como gran parte de la interacción tiene lugar a través de Discord, parte del tratamiento de datos también puede necesitar gestionarse mediante los propios sistemas de Discord.',
+        h9: '9. Seguridad de los datos',
+        c9a: 'Se utilizan medidas técnicas y organizativas razonables para reducir el riesgo de acceso no autorizado, uso indebido o pérdida de datos.',
+        c9b: 'Sin embargo, ningún servicio en línea puede garantizar seguridad absoluta.',
+        h10: '10. Edad y uso permitido',
+        c10a: 'Los usuarios solo deben utilizar el Bot de acuerdo con los Términos de Servicio de Discord, la legislación local y cualquier requisito de edad aplicable.',
+        h11: '11. Tratamiento internacional',
+        c11a: 'Dado que los proveedores externos pueden operar internacionalmente, los datos pueden procesarse en países fuera de tu propia jurisdicción.',
+        h12: '12. Cambios en esta política',
+        c12a: 'Esta Política de Privacidad puede actualizarse periódicamente. La versión más reciente será siempre la publicada en esta página.',
+        h13: '13. Contacto',
+        c13a: 'Si tienes preguntas sobre esta Política de Privacidad, debes ponerte en contacto con el operador del Bot a través de los canales de contacto disponibles en Discord o en el proyecto.',
+        footerText: 'Este documento se proporciona con fines informativos y puede actualizarse a medida que el Bot evolucione.'
+      },
+
+      fr: {
+        dir: 'ltr',
+        backLink: '← Retour à la page principale',
+        pageTag: 'Document juridique',
+        languageLabel: 'Langue',
+        title: 'Politique de confidentialité',
+        lastUpdated: 'Dernière mise à jour : 17 juin 2026',
+        translationNotice: 'Cette page comprend des traductions pour plus de commodité. Les traductions peuvent ne pas être parfaitement exactes. En cas d’incohérence ou d’ambiguïté, la version anglaise doit être considérée comme la version de référence.',
+        intro: 'Cette Politique de confidentialité explique comment 𐌋𐌀𐌐𐌐𐌋𐌀𐌍𐌃 (« le Bot », « nous ») traite les données personnelles lorsque les utilisateurs interagissent avec le Bot sur Discord.',
+        h1: '1. Responsable et champ d’application',
+        c1a: 'Cette Politique de confidentialité s’applique à l’utilisation du Bot dans les serveurs Discord, les salons et les interactions directes où le Bot est disponible.',
+        c1b: 'Le Bot a pour but de fournir une interaction par chat basée sur l’IA et des fonctionnalités Discord associées.',
+        h2: '2. Données susceptibles d’être traitées',
+        c2a: 'Selon la manière dont vous utilisez le Bot, les catégories de données suivantes peuvent être traitées :',
+        list2: [
+          'Identifiants Discord tels que nom d’utilisateur, pseudonyme affiché, identifiant utilisateur, informations de rôle et contexte du salon.',
+          'Messages envoyés au Bot ou messages qui déclenchent le Bot dans le cadre du canal et du rôle autorisés.',
+          'Métadonnées techniques telles que les horodatages, le contexte de base du serveur et les journaux liés aux requêtes.',
+          'Contexte conversationnel à court terme utilisé pour générer des réponses.'
+        ],
+        h3: '3. Stockage des conversations',
+        c3a: 'Le Bot peut stocker temporairement un nombre limité de messages afin de conserver le contexte et d’améliorer la qualité de la conversation.',
+        list3: [
+          'Le Bot stocke jusqu’à 200 messages en mémoire pour le contexte conversationnel.',
+          'Cet historique de messages est utilisé afin de générer des réponses plus cohérentes.',
+          'Les messages peuvent également rester stockés par Discord lui-même jusqu’à leur suppression manuelle ou leur suppression par un autre bot ou un modérateur.'
+        ],
+        h4: '4. Finalité du traitement',
+        c4a: 'Les données sont traitées uniquement afin de fournir les fonctionnalités du Bot, générer des réponses, maintenir une mémoire à court terme, améliorer la fiabilité et assurer le fonctionnement sécurisé du service.',
+        h5: '5. Base juridique',
+        c5a: 'Lorsque cela est applicable, le traitement est effectué sur la base de l’intérêt légitime à exploiter et sécuriser le Bot, et dans certains cas sur la base de l’interaction demandée par l’utilisateur avec le service.',
+        h6: '6. Services tiers',
+        c6a: 'Des services tiers peuvent être impliqués dans le fonctionnement du Bot.',
+        c6b: 'Cela peut inclure Discord pour la plateforme et la transmission des messages, Anthropic pour la génération de réponses par IA, Railway pour le déploiement et l’hébergement, et GitHub pour l’hébergement du code ou de pages statiques.',
+        c6c: 'Chaque prestataire tiers peut traiter certaines données selon sa propre politique de confidentialité et ses propres conditions.',
+        h7: '7. Conservation des données',
+        c7a: 'Nous essayons de limiter les données stockées à ce qui est nécessaire et proportionné à la finalité du service.',
+        list7: [
+          'La mémoire à court terme est limitée à 200 messages stockés.',
+          'Les journaux opérationnels peuvent être conservés uniquement aussi longtemps que nécessaire pour la maintenance, le débogage ou la prévention des abus.',
+          'Discord peut conserver les données séparément selon ses propres politiques.'
+        ],
+        h8: '8. Droits des utilisateurs',
+        c8a: 'Selon votre lieu de résidence et le droit applicable, vous pouvez disposer de droits d’accès, de rectification, d’effacement, de limitation ou d’opposition concernant les données personnelles.',
+        c8b: 'Comme une grande partie de l’interaction se fait via Discord, certains traitements de données peuvent également devoir être gérés via les systèmes de Discord lui-même.',
+        h9: '9. Sécurité des données',
+        c9a: 'Des mesures techniques et organisationnelles raisonnables sont utilisées pour réduire le risque d’accès non autorisé, de mauvaise utilisation ou de perte de données.',
+        c9b: 'Cependant, aucun service en ligne ne peut garantir une sécurité absolue.',
+        h10: '10. Âge et usage autorisé',
+        c10a: 'Les utilisateurs ne doivent utiliser le Bot qu’en conformité avec les Conditions d’utilisation de Discord, la législation locale et toute exigence d’âge applicable.',
+        h11: '11. Traitement international',
+        c11a: 'Étant donné que les prestataires tiers peuvent opérer à l’international, les données peuvent être traitées dans des pays situés en dehors de votre juridiction.',
+        h12: '12. Modifications de cette politique',
+        c12a: 'Cette Politique de confidentialité peut être mise à jour de temps à autre. La version la plus récente sera toujours celle publiée sur cette page.',
+        h13: '13. Contact',
+        c13a: 'Si vous avez des questions sur cette Politique de confidentialité, vous devez contacter l’exploitant du Bot via les canaux de contact Discord ou du projet disponibles.',
+        footerText: 'Ce document est fourni à titre informatif et peut être mis à jour au fur et à mesure de l’évolution du Bot.'
+      },
+
+      ru: {
+        dir: 'ltr',
+        backLink: '← Назад на главную страницу',
+        pageTag: 'Юридический документ',
+        languageLabel: 'Язык',
+        title: 'Политика конфиденциальности',
+        lastUpdated: 'Последнее обновление: 17 июня 2026 г.',
+        translationNotice: 'Эта страница содержит переводы для удобства. Переводы могут быть не полностью точными. В случае расхождений или неоднозначностей определяющей считается английская версия.',
+        intro: 'Настоящая Политика конфиденциальности объясняет, как 𐌋𐌀𐌐𐌐𐌋𐌀𐌍𐌃 («Бот», «мы») обрабатывает персональные данные, когда пользователи взаимодействуют с Ботом в Discord.',
+        h1: '1. Оператор и сфера действия',
+        c1a: 'Настоящая Политика конфиденциальности применяется к использованию Бота на серверах Discord, в каналах и прямых взаимодействиях, где Бот доступен.',
+        c1b: 'Бот предназначен для предоставления чат-взаимодействия на базе ИИ и связанных функций Discord.',
+        h2: '2. Какие данные могут обрабатываться',
+        c2a: 'В зависимости от того, как вы используете Бота, могут обрабатываться следующие категории данных:',
+        list2: [
+          'Идентификаторы Discord, такие как имя пользователя, отображаемое имя, ID пользователя, сведения о ролях и контекст канала.',
+          'Сообщения, отправленные Боту, или сообщения, которые активируют Бота в разрешённом канале и при разрешённой роли.',
+          'Технические метаданные, такие как временные метки, базовый контекст сервера и журналы, связанные с запросами.',
+          'Краткосрочный контекст беседы, используемый для генерации ответов.'
+        ],
+        h3: '3. Хранение разговоров',
+        c3a: 'Бот может временно хранить ограниченный объём истории сообщений для сохранения контекста и улучшения качества общения.',
+        list3: [
+          'Бот хранит до 200 сообщений в памяти для контекста беседы.',
+          'Эта история используется для создания более связных ответов.',
+          'Сообщения также могут продолжать храниться самим Discord, пока они не будут удалены вручную или другим ботом либо модератором.'
+        ],
+        h4: '4. Цели обработки',
+        c4a: 'Данные обрабатываются только для предоставления функций Бота, генерации ответов, поддержания краткосрочной памяти, повышения надёжности и обеспечения безопасной работы сервиса.',
+        h5: '5. Правовое основание',
+        c5a: 'Если применимо, обработка осуществляется на основании законного интереса в эксплуатации и защите Бота, а в некоторых случаях — на основании запрошенного пользователем взаимодействия с сервисом.',
+        h6: '6. Сторонние сервисы',
+        c6a: 'Для работы Бота могут использоваться сторонние сервисы.',
+        c6b: 'К ним могут относиться Discord для платформы и доставки сообщений, Anthropic для генерации ответов ИИ, Railway для развертывания и хостинга, а также GitHub для размещения кода или статических страниц.',
+        c6c: 'Каждый сторонний поставщик может обрабатывать определённые данные в соответствии со своей собственной политикой конфиденциальности и условиями.',
+        h7: '7. Срок хранения данных',
+        c7a: 'Мы стараемся ограничивать объём хранимых данных и делать его соразмерным целям сервиса.',
+        list7: [
+          'Краткосрочная память ограничена 200 сохранёнными сообщениями.',
+          'Операционные журналы могут храниться только столько времени, сколько необходимо для обслуживания, отладки или предотвращения злоупотреблений.',
+          'Discord может хранить данные отдельно в соответствии со своими собственными правилами.'
+        ],
+        h8: '8. Права пользователей',
+        c8a: 'В зависимости от вашего местоположения и применимого законодательства у вас могут быть права на доступ, исправление, удаление, ограничение обработки или возражение в отношении персональных данных.',
+        c8b: 'Поскольку значительная часть взаимодействия происходит через Discord, некоторые вопросы обработки данных также могут потребовать обращения к системам самого Discord.',
+        h9: '9. Безопасность данных',
+        c9a: 'Используются разумные технические и организационные меры для снижения риска несанкционированного доступа, неправомерного использования или потери данных.',
+        c9b: 'Однако ни один онлайн-сервис не может гарантировать абсолютную безопасность.',
+        h10: '10. Возраст и допустимое использование',
+        c10a: 'Пользователи должны использовать Бота только в соответствии с Условиями использования Discord, местным законодательством и применимыми возрастными требованиями.',
+        h11: '11. Международная обработка',
+        c11a: 'Поскольку сторонние поставщики могут работать на международном уровне, данные могут обрабатываться в странах за пределами вашей собственной юрисдикции.',
+        h12: '12. Изменения этой политики',
+        c12a: 'Настоящая Политика конфиденциальности может время от времени обновляться. На этой странице всегда публикуется самая актуальная версия.',
+        h13: '13. Контакты',
+        c13a: 'Если у вас есть вопросы по поводу настоящей Политики конфиденциальности, вам следует связаться с оператором Бота через доступные каналы Discord или проекта.',
+        footerText: 'Этот документ предоставляется в информационных целях и может обновляться по мере развития Бота.'
+      },
+
+      ar: {
+        dir: 'rtl',
+        backLink: '← العودة إلى الصفحة الرئيسية',
+        pageTag: 'مستند قانوني',
+        languageLabel: 'اللغة',
+        title: 'سياسة الخصوصية',
+        lastUpdated: 'آخر تحديث: 17 يونيو 2026',
+        translationNotice: 'تتضمن هذه الصفحة ترجمات لسهولة الاستخدام. قد لا تكون الترجمات دقيقة تمامًا. في حال وجود أي تعارض أو غموض، تُعد النسخة الإنجليزية هي النسخة المعتمدة.',
+        intro: 'توضح سياسة الخصوصية هذه كيفية قيام 𐌋𐌀𐌐𐌐𐌋𐌀𐌍𐌃 ("البوت"، "نحن") بمعالجة البيانات الشخصية عندما يتفاعل المستخدمون مع البوت على Discord.',
+        h1: '1. الجهة المسؤولة ونطاق التطبيق',
+        c1a: 'تنطبق سياسة الخصوصية هذه على استخدام البوت داخل خوادم Discord والقنوات والتفاعلات المباشرة التي يكون فيها البوت متاحًا.',
+        c1b: 'يهدف البوت إلى تقديم تفاعل دردشة قائم على الذكاء الاصطناعي ووظائف مرتبطة بـ Discord.',
+        h2: '2. البيانات التي قد نقوم بمعالجتها',
+        c2a: 'اعتمادًا على كيفية استخدامك للبوت، قد تتم معالجة الفئات التالية من البيانات:',
+        list2: [
+          'معرفات Discord مثل اسم المستخدم والاسم الظاهر ومعرف المستخدم ومعلومات الرتبة وسياق القناة.',
+          'الرسائل المرسلة إلى البوت أو الرسائل التي تؤدي إلى تشغيل البوت ضمن إعدادات القناة والرتبة المسموح بها.',
+          'البيانات التقنية مثل الطوابع الزمنية وسياق الخادم الأساسي والسجلات المرتبطة بالطلبات.',
+          'سياق محادثة قصير الأجل يُستخدم لتوليد الردود.'
+        ],
+        h3: '3. تخزين المحادثات',
+        c3a: 'قد يقوم البوت بتخزين قدر محدود من سجل الرسائل مؤقتًا للحفاظ على السياق وتحسين جودة المحادثة.',
+        list3: [
+          'يقوم البوت بتخزين ما يصل إلى 200 رسالة في الذاكرة من أجل سياق المحادثة.',
+          'يُستخدم هذا السجل لإنشاء ردود أكثر تماسكًا.',
+          'قد تبقى الرسائل مخزنة أيضًا لدى Discord نفسه ما لم يتم حذفها يدويًا أو إزالتها بواسطة بوت آخر أو مشرف.'
+        ],
+        h4: '4. غرض المعالجة',
+        c4a: 'تتم معالجة البيانات فقط لتوفير وظائف البوت، وإنشاء الردود، والحفاظ على الذاكرة قصيرة الأجل، وتحسين الموثوقية، والحفاظ على أمان الخدمة وتشغيلها.',
+        h5: '5. الأساس القانوني',
+        c5a: 'عند الاقتضاء، تتم المعالجة على أساس المصلحة المشروعة في تشغيل البوت وتأمينه، وفي بعض الحالات على أساس التفاعل الذي يطلبه المستخدم مع الخدمة.',
+        h6: '6. خدمات الأطراف الثالثة',
+        c6a: 'قد تشارك خدمات تابعة لجهات خارجية في تشغيل البوت.',
+        c6b: 'قد يشمل ذلك Discord لاستضافة المنصة وتسليم الرسائل، وAnthropic لتوليد ردود الذكاء الاصطناعي، وRailway للنشر والاستضافة، وGitHub لاستضافة الكود أو الصفحات الثابتة.',
+        c6c: 'قد يعالج كل مزود خدمة خارجي بعض البيانات وفقًا لسياسة الخصوصية والشروط الخاصة به.',
+        h7: '7. الاحتفاظ بالبيانات',
+        c7a: 'نحاول إبقاء البيانات المخزنة محدودة ومتناسبة مع غرض الخدمة.',
+        list7: [
+          'تقتصر الذاكرة قصيرة الأجل على 200 رسالة مخزنة.',
+          'قد يتم الاحتفاظ بالسجلات التشغيلية فقط طالما كان ذلك ضروريًا للصيانة أو التصحيح أو منع إساءة الاستخدام.',
+          'قد يحتفظ Discord بالبيانات بشكل منفصل وفقًا لسياساته الخاصة.'
+        ],
+        h8: '8. حقوق المستخدم',
+        c8a: 'اعتمادًا على موقعك والقانون المعمول به، قد تكون لديك حقوق تتعلق بالوصول إلى البيانات الشخصية أو تصحيحها أو حذفها أو تقييدها أو الاعتراض عليها.',
+        c8b: 'وبما أن جزءًا كبيرًا من التفاعل يحدث عبر Discord، فقد يلزم أيضًا التعامل مع بعض جوانب البيانات من خلال أنظمة Discord الخاصة.',
+        h9: '9. أمن البيانات',
+        c9a: 'تُستخدم تدابير تقنية وتنظيمية معقولة لتقليل مخاطر الوصول غير المصرح به أو إساءة الاستخدام أو فقدان البيانات.',
+        c9b: 'ومع ذلك، لا يمكن لأي خدمة عبر الإنترنت أن تضمن أمانًا مطلقًا.',
+        h10: '10. العمر والاستخدام المقبول',
+        c10a: 'يجب على المستخدمين استخدام البوت فقط بما يتوافق مع شروط خدمة Discord والقانون المحلي وأي متطلبات عمرية معمول بها.',
+        h11: '11. المعالجة الدولية',
+        c11a: 'نظرًا لأن مزودي الخدمات الخارجيين قد يعملون دوليًا، فقد تتم معالجة البيانات في بلدان خارج نطاق ولايتك القضائية.',
+        h12: '12. التغييرات على هذه السياسة',
+        c12a: 'قد يتم تحديث سياسة الخصوصية هذه من وقت لآخر. وستكون النسخة الأحدث دائمًا هي المنشورة على هذه الصفحة.',
+        h13: '13. الاتصال',
+        c13a: 'إذا كانت لديك أسئلة حول سياسة الخصوصية هذه، فيجب عليك التواصل مع مشغل البوت عبر قنوات الاتصال المتاحة في Discord أو المشروع.',
+        footerText: 'يتم تقديم هذا المستند لأغراض معلوماتية وقد يتم تحديثه مع تطور البوت.'
+      }
+    };
+
+    const ids = [
+      'backLink','pageTag','languageLabel','title','lastUpdated','translationNotice','intro',
+      'h1','c1a','c1b','h2','c2a','h3','c3a','h4','c4a','h5','c5a','h6','c6a','c6b','c6c',
+      'h7','c7a','h8','c8a','c8b','h9','c9a','c9b','h10','c10a','h11','c11a','h12','c12a',
+      'h13','c13a','footerText'
+    ];
+
+    function fillList(id, items) {
+      const el = document.getElementById(id);
+      el.innerHTML = '';
+      items.forEach(item => {
+        const li = document.createElement('li');
+        li.textContent = item;
+        el.appendChild(li);
+      });
+    }
+
+    function updateBackLink(lang) {
+      document.getElementById('backLink').href = `./index.html?lang=${encodeURIComponent(lang)}`;
+    }
+
+    function applyLanguage(lang) {
+      const t = translations[lang] || translations.en;
+
+      document.documentElement.lang = lang;
+      document.documentElement.dir = t.dir || 'ltr';
+
+      ids.forEach(id => {
+        const el = document.getElementById(id);
+        if (!el || !(id in t)) return;
+        el.textContent = t[id];
+      });
+
+      fillList('list2', t.list2);
+      fillList('list3', t.list3);
+      fillList('list7', t.list7);
+      updateBackLink(lang);
+
+      const select = document.getElementById('languageSelect');
+      if (select.value !== lang) select.value = lang;
+    }
+
+    const languageSelect = document.getElementById('languageSelect');
+
+    languageSelect.addEventListener('change', (event) => {
+      const lang = event.target.value;
+      const url = new URL(window.location.href);
+      url.searchParams.set('lang', lang);
+      window.history.replaceState({}, '', url);
+      applyLanguage(lang);
+    });
+
+    const params = new URLSearchParams(window.location.search);
+    const initialLang = params.get('lang');
+    const startLang = translations[initialLang] ? initialLang : 'en';
+
+    applyLanguage(startLang);
+  </script>
+</body>
+</html>
